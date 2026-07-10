@@ -11,8 +11,8 @@ goatcounter: ""            # مثال: ammar → لوحة الإحصائيات: 
 
 # رابط الموقع بعد النشر على GitHub Pages:
 # url: "https://USERNAME.github.io"
-url: ""
-baseurl: ""
+url: "https://ammarabdalrahem.github.io"
+baseurl: "/ammar-offline"
 
 # ── إعدادات تقنية (لا تحتاج تغييرها) ─────────────
 lang: ar
