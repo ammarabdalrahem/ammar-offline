@@ -1,0 +1,30 @@
+# ── إعدادات المدونة ──────────────────────────────
+# غيّر هذه القيم فقط:
+title: عمّار غير متصل              # اسم المدونة — Ammar Offline
+tagline: أفكار وملاحظات شخصية      # وصف قصير يظهر تحت الاسم
+author: عمّار                      # اسمك (يظهر في المقالات)
+description: مدونة شخصية بالعربية
+
+# إحصائيات الزوار (مجاني): سجّل في goatcounter.com
+# واختر اسمًا (مثل ammar) ثم ضعه هنا:
+goatcounter: ""            # مثال: ammar → لوحة الإحصائيات: ammar.goatcounter.com
+
+# رابط الموقع بعد النشر على GitHub Pages:
+# url: "https://USERNAME.github.io"
+url: ""
+baseurl: ""
+
+# ── إعدادات تقنية (لا تحتاج تغييرها) ─────────────
+lang: ar
+timezone: Asia/Riyadh
+markdown: kramdown
+permalink: /:year/:month/:title/
+plugins:
+  - jekyll-feed
+feed:
+  path: feed.xml
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock

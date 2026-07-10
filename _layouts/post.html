@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+    <div class="post-byline">
+      <div class="avatar">{{ site.author | slice: 0 }}</div>
+      <div class="byline-text">
+        <span class="byline-author">{{ site.author }}</span>
+        <span class="byline-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{% include date_ar.html date=page.date %}</time>
+          <span class="dot">·</span>
+          {% assign words = content | strip_html | number_of_words %}
+          {{ words | divided_by: 180 | plus: 1 }} دقائق قراءة
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <a class="back-link" href="{{ '/' | relative_url }}">→ جميع المقالات</a>
+  </footer>
+</article>

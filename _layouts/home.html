@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section class="hero">
+  <h1 class="hero-title">{{ site.title }}</h1>
+  <p class="hero-tagline">{{ site.tagline }}</p>
+</section>
+
+<section class="post-list">
+  {% for post in site.posts %}
+  <article class="post-item">
+    <a class="post-item-link" href="{{ post.url | relative_url }}">
+      <h2 class="post-item-title">{{ post.title }}</h2>
+      <p class="post-item-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 220 }}</p>
+    </a>
+    <div class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{% include date_ar.html date=post.date %}</time>
+      <span class="dot">·</span>
+      {% assign words = post.content | strip_html | number_of_words %}
+      <span>{{ words | divided_by: 180 | plus: 1 }} دقائق قراءة</span>
+    </div>
+  </article>
+  {% endfor %}
+</section>
