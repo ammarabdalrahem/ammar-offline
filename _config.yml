@@ -7,7 +7,7 @@ description: مدونة شخصية بالعربية
 
 # إحصائيات الزوار (مجاني): سجّل في goatcounter.com
 # واختر اسمًا (مثل ammar) ثم ضعه هنا:
-goatcounter: ""            # مثال: ammar → لوحة الإحصائيات: ammar.goatcounter.com
+goatcounter: "ammar-offline"            # مثال: ammar → لوحة الإحصائيات: ammar.goatcounter.com
 
 # رابط الموقع بعد النشر على GitHub Pages:
 # url: "https://USERNAME.github.io"
