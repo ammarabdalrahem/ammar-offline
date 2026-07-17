@@ -214,6 +214,26 @@ a { color: inherit; text-decoration: none; }
 .post-content pre code { background: none; padding: 0; }
 
 .post-footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--faint); }
+.share-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  margin-bottom: 28px;
+}
+.share-label { font-size: 0.9rem; color: var(--muted); margin-inline-end: 4px; }
+.share-btn {
+  width: 42px; height: 42px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  color: var(--muted);
+  transition: all .15s;
+}
+.share-btn svg { width: 19px; height: 19px; fill: currentColor; }
+.share-btn:hover { border-color: currentColor; }
+.share-btn[title="واتساب"]:hover { color: #25D366; }
+.share-btn[title="تيليغرام"]:hover { color: #26A5E4; }
+.share-btn[title="لينكدإن"]:hover { color: #0A66C2; }
+.share-btn[title="فيسبوك"]:hover { color: #1877F2; }
+.share-btn[title="X"]:hover { color: var(--ink); }
 .back-link { font-size: 0.95rem; color: var(--muted); }
 .back-link:hover { color: var(--ink); }
 
@@ -231,19 +251,3 @@ a { color: inherit; text-decoration: none; }
   .post-content { font-size: 1.15rem; }
   .hero { padding: 48px 0 32px; }
 }
-
-
-.share-bar {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
-  margin-bottom: 28px;
-}
-.share-label { font-size: 0.9rem; color: var(--muted); margin-inline-end: 4px; }
-.share-btn {
-  font-size: 0.85rem;
-  padding: 6px 16px;
-  border: 1px solid #d9d9d9;
-  border-radius: 99px;
-  color: var(--ink);
-  transition: all .15s;
-}
-.share-btn:hover { border-color: var(--ink); background: var(--faint); }
