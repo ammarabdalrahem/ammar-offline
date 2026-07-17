@@ -52,9 +52,19 @@
   --measure: 700px;
 }
 
-/* ═══ الوضع الليلي (تلقائي حسب إعداد الجهاز) ═══ */
+/* ═══ الوضع الليلي ═══
+   يعمل تلقائيًا حسب إعداد الجهاز، أو يدويًا عبر زر القمر/الشمس */
+:root[data-theme="dark"] {
+  --ink: #e8e6e3;
+  --muted: #9e9e9e;
+  --faint: #2a2a2a;
+  --border: #3d3d3d;
+  --code-bg: #1e1e1e;
+  --accent: #4caf50;
+  --bg: #121212;
+}
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --ink: #e8e6e3;
     --muted: #9e9e9e;
     --faint: #2a2a2a;
@@ -63,6 +73,26 @@
     --accent: #4caf50;
     --bg: #121212;
   }
+}
+
+/* زر التبديل */
+.theme-toggle {
+  background: none; border: none; cursor: pointer;
+  color: var(--muted);
+  width: 36px; height: 36px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  margin-inline-start: 16px;
+  transition: color .15s;
+}
+.theme-toggle:hover { color: var(--ink); }
+.theme-toggle svg { width: 19px; height: 19px; fill: currentColor; }
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
 }
 
 /* ═══ أساسيات ═══ */
