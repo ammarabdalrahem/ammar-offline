@@ -16,8 +16,11 @@ layout: default
     <div class="post-meta">
       <time datetime="{{ post.date | date_to_xmlschema }}">{% include date_ar.html date=post.date %}</time>
       <span class="dot">·</span>
-      {% assign words = post.content | strip_html | number_of_words %}
-      <span>{{ words | divided_by: 180 | plus: 1 }} دقائق قراءة</span>
+      <span>{% include reading_time.html content=post.content %}</span>
+      {% if post.tags.size > 0 %}
+      <span class="dot">·</span>
+      {% for t in post.tags %}<a class="tag-chip" href="{{ '/tags/' | relative_url }}#{{ t | slugify }}">{{ t }}</a>{% endfor %}
+      {% endif %}
     </div>
   </article>
   {% endfor %}

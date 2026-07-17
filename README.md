@@ -2,6 +2,35 @@
 
 Medium-style personal blog in Arabic (RTL) using the official [Thmanyah typeface](https://font.thmanyah.com/), built with Jekyll for GitHub Pages.
 
+## Deploy to GitHub Pages (5 minutes)
+
+1. Create a new repository on GitHub named `USERNAME.github.io` (replace `USERNAME` with your GitHub username).
+2. Push this folder to it:
+
+   ```bash
+   cd arabic-blog
+   git init
+   git add .
+   git commit -m "My Arabic blog"
+   git branch -M main
+   git remote add origin https://github.com/USERNAME/USERNAME.github.io.git
+   git push -u origin main
+   ```
+
+3. On GitHub: **Settings → Pages** → Source: **Deploy from a branch** → Branch: `main` / `(root)` → Save.
+4. Your blog is live at `https://USERNAME.github.io` within a minute or two.
+
+> To use a differently-named repo (e.g. `blog`), set `baseurl: "/blog"` in `_config.yml` and the site will be at `https://USERNAME.github.io/blog`.
+
+## Rename the blog
+
+Edit the top of `_config.yml`:
+
+```yaml
+title: مدونتي            # ← your blog name
+tagline: أفكار وملاحظات شخصية
+author: عمّار             # ← your name
+```
 
 ## Write a new post
 

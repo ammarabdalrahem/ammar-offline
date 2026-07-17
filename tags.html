@@ -1,0 +1,27 @@
+---
+layout: default
+title: الوسوم
+permalink: /tags/
+---
+<section class="page-head">
+  <h1 class="page-title">الوسوم</h1>
+</section>
+
+{% assign sorted_tags = site.tags | sort %}
+<div class="tags-index">
+  {% for tag in sorted_tags %}
+  <a class="tag-chip tag-chip-lg" href="#{{ tag[0] | slugify }}">{{ tag[0] }} <span class="tag-count">{{ tag[1].size }}</span></a>
+  {% endfor %}
+</div>
+
+{% for tag in sorted_tags %}
+<section class="tag-group" id="{{ tag[0] | slugify }}">
+  <h2 class="tag-heading">{{ tag[0] }}</h2>
+  {% for post in tag[1] %}
+  <a class="archive-item" href="{{ post.url | relative_url }}">
+    <span class="archive-title">{{ post.title }}</span>
+    <span class="archive-date">{% include date_ar.html date=post.date %}</span>
+  </a>
+  {% endfor %}
+</section>
+{% endfor %}

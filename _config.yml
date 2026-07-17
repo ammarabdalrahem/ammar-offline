@@ -2,17 +2,29 @@
 # غيّر هذه القيم فقط:
 title: عمّار غير متصل              # اسم المدونة — Ammar Offline
 tagline: أفكار وملاحظات شخصية      # وصف قصير يظهر تحت الاسم
-author: عمّار عبد الرحيم                      # اسمك (يظهر في المقالات)
+author: عمّار                      # اسمك (يظهر في المقالات)
 description: مدونة شخصية بالعربية
+
+# صورتك الشخصية (اختياري): ارفع صورة إلى assets/images ثم ضع مسارها
+avatar: ""                 # مثال: /assets/images/avatar.jpg
+# نبذة قصيرة تظهر في بطاقة التعريف أسفل كل مقال:
+bio: "باحث ومدوّن. أكتب هنا عن الأفكار التي تستحق التدوين."
+
+# روابط التواصل في تذييل الموقع (اترك ما لا تريده فارغًا):
+social:
+  email: "ammar.abdalrahem94@gmail.com"
+  linkedin: ""             # الرابط الكامل لحسابك
+  x: ""                    # الرابط الكامل لحسابك
+  scholar: ""              # رابط Google Scholar
 
 # إحصائيات الزوار (مجاني): سجّل في goatcounter.com
 # واختر اسمًا (مثل ammar) ثم ضعه هنا:
-goatcounter: "ammar-offline"            # مثال: ammar → لوحة الإحصائيات: ammar.goatcounter.com
+goatcounter: ""            # مثال: ammar → لوحة الإحصائيات: ammar.goatcounter.com
 
 # رابط الموقع بعد النشر على GitHub Pages:
 # url: "https://USERNAME.github.io"
-url: "https://ammarabdalrahem.github.io"
-baseurl: "/ammar-offline"
+url: ""
+baseurl: ""
 
 # ── إعدادات تقنية (لا تحتاج تغييرها) ─────────────
 lang: ar
