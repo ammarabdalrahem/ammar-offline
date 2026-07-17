@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+  <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -29,6 +30,10 @@
         <a href="{{ '/archive/' | relative_url }}">الأرشيف</a>
         <a href="{{ '/tags/' | relative_url }}">الوسوم</a>
         <a href="{{ '/about/' | relative_url }}">عنّي</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع الليلي" title="الوضع الليلي" type="button">
+          <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.3 22h-.1a10.31 10.31 0 0 1-7.34-3.15 10.46 10.46 0 0 1-.26-14 10.13 10.13 0 0 1 4-2.74 1 1 0 0 1 1.06.22 1 1 0 0 1 .24 1 8.4 8.4 0 0 0 1.94 8.81 8.47 8.47 0 0 0 8.83 1.94 1 1 0 0 1 1.27 1.29A10.16 10.16 0 0 1 19.6 19a10.28 10.28 0 0 1-7.3 3z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17a5 5 0 1 1 5-5 5 5 0 0 1-5 5zm0-8a3 3 0 1 0 3 3 3 3 0 0 0-3-3zm0-3a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v2a1 1 0 0 1-1 1zm0 17a1 1 0 0 1-1-1v-2a1 1 0 0 1 2 0v2a1 1 0 0 1-1 1zm9-9h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zM5 13H3a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zm12.66-5.66a1 1 0 0 1-.71-1.71l1.42-1.42a1 1 0 1 1 1.41 1.42l-1.41 1.41a1 1 0 0 1-.71.3zM4.93 20.07a1 1 0 0 1-.7-1.71l1.41-1.41a1 1 0 0 1 1.41 1.41l-1.41 1.42a1 1 0 0 1-.71.29zm14.14 0a1 1 0 0 1-.71-.29l-1.41-1.42a1 1 0 0 1 1.41-1.41l1.42 1.41a1 1 0 0 1-.71 1.71zM6.34 7.34a1 1 0 0 1-.7-.29L4.22 5.63a1 1 0 0 1 1.41-1.42l1.42 1.42a1 1 0 0 1-.71 1.71z"/></svg>
+        </button>
       </nav>
     </div>
   </header>
@@ -49,6 +54,16 @@
       <p>© {{ site.time | date: "%Y" }} {{ site.author }}</p>
     </div>
   </footer>
+  <script>
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      var root = document.documentElement;
+      var current = root.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
   {% if site.goatcounter and site.goatcounter != "" %}
   <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count"
           async src="https://gc.zgo.at/count.js"></script>
