@@ -24,6 +24,15 @@ layout: default
   </div>
 
   <footer class="post-footer">
+    {% assign share_url = page.url | absolute_url | url_encode %}
+    {% assign share_text = page.title | url_encode %}
+    <div class="share-bar">
+      <span class="share-label">شارك المقال:</span>
+      <a class="share-btn" href="https://api.whatsapp.com/send?text={{ share_text }}%20{{ share_url }}" target="_blank" rel="noopener">واتساب</a>
+      <a class="share-btn" href="https://t.me/share/url?url={{ share_url }}&text={{ share_text }}" target="_blank" rel="noopener">تيليغرام</a>
+      <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url }}" target="_blank" rel="noopener">لينكدإن</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}" target="_blank" rel="noopener">فيسبوك</a>
+      <a class="share-btn" href="https://x.com/intent/tweet?url={{ share_url }}&text={{ share_text }}" target="_blank" rel="noopener">X</a>
+    </div>
     <a class="back-link" href="{{ '/' | relative_url }}">→ جميع المقالات</a>
   </footer>
-</article>
