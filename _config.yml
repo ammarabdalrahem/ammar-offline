@@ -15,16 +15,15 @@ social:
   email: "ammar.abdalrahem94@gmail.com"
   linkedin: ""             # الرابط الكامل لحسابك
   x: ""                    # الرابط الكامل لحسابك
-  scholar: ""              # رابط Google Scholar
-
 # إحصائيات الزوار (مجاني): سجّل في goatcounter.com
 # واختر اسمًا (مثل ammar) ثم ضعه هنا:
 goatcounter: ""            # مثال: ammar → لوحة الإحصائيات: ammar.goatcounter.com
 
 # رابط الموقع بعد النشر على GitHub Pages:
 # url: "https://USERNAME.github.io"
-url: ""
-baseurl: ""
+url: "https://ammarabdalrahem.github.io"
+baseurl: "/ammar-offline"
+goatcounter: "ammar-offline"
 
 # ── إعدادات تقنية (لا تحتاج تغييرها) ─────────────
 lang: ar
