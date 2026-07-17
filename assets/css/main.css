@@ -231,3 +231,19 @@ a { color: inherit; text-decoration: none; }
   .post-content { font-size: 1.15rem; }
   .hero { padding: 48px 0 32px; }
 }
+
+
+.share-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  margin-bottom: 28px;
+}
+.share-label { font-size: 0.9rem; color: var(--muted); margin-inline-end: 4px; }
+.share-btn {
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 99px;
+  color: var(--ink);
+  transition: all .15s;
+}
+.share-btn:hover { border-color: var(--ink); background: var(--faint); }
